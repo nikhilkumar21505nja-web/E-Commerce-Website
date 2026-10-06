@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart – ShopEasy</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="/index.html" class="logo">🛍️ ShopEasy</a>
+      <nav class="nav-links" id="nav-links"></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Your Cart</h2>
+
+    <div class="cart-layout">
+      <section class="panel" id="cart-items"></section>
+
+      <aside class="panel" id="cart-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-row summary-total">
+          <span>Total</span>
+          <span id="cart-total">₹0.00</span>
+        </div>
+        <a class="btn btn-block" id="checkout-btn" href="/checkout.html" style="margin-top:16px;text-align:center">Proceed to Checkout</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer>© 2026 ShopEasy</footer>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout – ShopEasy</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="/index.html" class="logo">🛍️ ShopEasy</a>
+      <nav class="nav-links" id="nav-links"></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="checkout-view">
+      <h2 class="page-title">Checkout</h2>
+
+      <div class="cart-layout">
+        <form class="panel" id="checkout-form">
+          <h3>Shipping details</h3>
+
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" required />
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" required pattern="[0-9+\- ]{7,15}" title="Enter a valid phone number" />
+
+          <label for="address">Address</label>
+          <input type="text" id="address" required />
+
+          <label for="city">City</label>
+          <input type="text" id="city" required />
+
+          <label for="postalCode">PIN / Postal code</label>
+          <input type="text" id="postalCode" required pattern="[A-Za-z0-9 \-]{4,10}" title="Enter a valid postal code" />
+
+          <label for="paymentMethod">Payment method</label>
+          <select id="paymentMethod">
+            <option value="COD">Cash on Delivery</option>
+            <option value="ONLINE">Online payment (demo)</option>
+          </select>
+
+          <p class="error-msg" id="error"></p>
+          <button class="btn btn-block" type="submit" id="place-btn">Place order</button>
+        </form>
+
+        <aside class="panel">
+          <h3>Order Summary</h3>
+          <div id="summary-items"></div>
+          <div class="summary-row summary-total">
+            <span>Total</span>
+            <span id="summary-total">₹0.00</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div id="success-view" class="success-box panel" style="display:none">
+      <div class="tick">✔</div>
+      <h2>Order placed!</h2>
+      <p id="success-text" style="margin:10px 0 20px"></p>
+      <a class="btn" href="/orders.html">View my orders</a>
+      <a class="btn btn-outline" href="/index.html">Continue shopping</a>
+    </div>
+  </main>
+
+  <footer>© 2026 ShopEasy</footer>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/checkout.js"></script>
+</body>
+</html>
